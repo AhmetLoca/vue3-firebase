@@ -4,7 +4,7 @@ const app = Vue.createApp({
       <ul>
         <li v-for="icecek in icecekler"
           class="li"
-          :class="{secilen:icecek.sec}"
+          :class="{secilen}"
           @click="icecekSec(icecek)">
          {{icecek.isim}}
         </li>
@@ -41,7 +41,7 @@ const app = Vue.createApp({
   },
   computed: {
     secilenIcecekler() {
-      return secilenler = this.icecekler.filter(i => i.sec)
+      return this.icecekler.filter(i => i.sec)
     }
   }
 });
